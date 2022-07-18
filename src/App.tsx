@@ -13,6 +13,10 @@ import ArticleList from "./ArticleList";
 import { ArticleCreate } from "./ArticleCreate";
 import { ArticleEdit } from "./ArticleEdit";
 
+import CategoryList from "./CategoryList";
+import { CategoryEdit } from "./CategoryEdit";
+import { CategoryCreate } from "./CategoryCreate";
+
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
     options.headers = new Headers({ Accept: "application/json" });
@@ -38,7 +42,12 @@ const App = () => (
     />
 
     <Resource name='packages' />
-    <Resource name='categories' />
+    <Resource
+     name='categories'
+     list={CategoryList} 
+     edit={CategoryEdit}
+     create={CategoryCreate}
+     />
     <Resource name='articlesCategories' />
     <Resource name='packagesCategories' />
     <Resource name='completedArticles' />
