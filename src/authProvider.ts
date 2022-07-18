@@ -3,12 +3,12 @@ import { AuthProvider } from 'react-admin';
 type IUserInfo = {
   id: string;
   firstname: string;
-  admin: number;
+  isAdmin: number;
 };
 
 const authProvider: AuthProvider = {
   login: (props) => {
-    const request = new Request('http://localhost:8000/api/login', {
+    const request = new Request('http://localhost:3000/api/login', {
       method: 'POST',
       body: JSON.stringify({ email: props.username, password: props.password }),
       headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -23,7 +23,8 @@ const authProvider: AuthProvider = {
         return response.json();
       })
       .then((auth: IUserInfo) => {
-        if (auth.admin == 1) {
+        console.log(auth);
+        if (auth.isAdmin == 1) {
           localStorage.setItem('auth', JSON.stringify(auth));
         } else {
           throw new Error('INSUFFICIENT_PRIVILEGES');
