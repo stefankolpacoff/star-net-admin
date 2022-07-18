@@ -18,7 +18,7 @@ const httpClient = (url: string, options: any = {}) => {
 };
 
 const dataProvider = simpleRestProvider(
-  'http://localhost:8000/api',
+  'http://localhost:3000/api',
   httpClient
 );
 const App = () => (

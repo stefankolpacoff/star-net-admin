@@ -3,6 +3,7 @@ import {
   Datagrid,
   EmailField,
   FunctionField,
+  DateField,
   Identifier,
   List,
   ListProps,
@@ -22,10 +23,13 @@ const UserList = (props: ListProps) => {
     <List {...props}>
       <Datagrid rowClick="edit">
         <NumberField source="id" sortBy="users.id" />
-        <TextField source="firstname" />
-        <TextField source="lastname" />
+        <TextField source="firstName" />
+        <TextField source="lastName" />
         <EmailField source="email" />
-        <BooleanNumField source="admin" />
+        <TextField source="phoneNumber" />
+        <BooleanNumField source="isAdmin" />
+        <DateField source="registrationDate" />
+        <TextField source="userPicture" />
       </Datagrid>
     </List>
   );
