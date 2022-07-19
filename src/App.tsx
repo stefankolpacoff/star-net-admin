@@ -16,6 +16,8 @@ import { ArticleEdit } from "./ArticleEdit";
 import CategoryList from "./CategoryList";
 import { CategoryEdit } from "./CategoryEdit";
 import { CategoryCreate } from "./CategoryCreate";
+import CommentList from "./CommentList";
+import CommentEdit from "./CommentEdit";
 
 import FaqList from "./FaqList";
 import { FaqEdit } from "./FaqEdit";
@@ -47,15 +49,18 @@ const App = () => (
 
     <Resource name='packages' />
     <Resource
-     name='categories'
-     list={CategoryList} 
-     edit={CategoryEdit}
-     create={CategoryCreate}
-     />
+      name='categories'
+      list={CategoryList}
+      edit={CategoryEdit}
+      create={CategoryCreate}
+    />
     <Resource name='articlesCategories' />
     <Resource name='packagesCategories' />
     <Resource name='completedArticles' />
     <Resource name='articlesPackage' />
+
+    <Resource name='faqs' />
+    <Resource name='comments' list={CommentList} edit={CommentEdit} />
 
     <Resource 
       name='faq'
@@ -63,7 +68,6 @@ const App = () => (
       edit={FaqEdit}
       create={FaqCreate}
        />
-
     <Resource name='comments' />
     <Resource name='badges' />
 
