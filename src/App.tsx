@@ -16,6 +16,8 @@ import { ArticleEdit } from "./ArticleEdit";
 import CategoryList from "./CategoryList";
 import { CategoryEdit } from "./CategoryEdit";
 import { CategoryCreate } from "./CategoryCreate";
+import CommentList from "./CommentList";
+import CommentEdit from "./CommentEdit";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -43,17 +45,17 @@ const App = () => (
 
     <Resource name='packages' />
     <Resource
-     name='categories'
-     list={CategoryList} 
-     edit={CategoryEdit}
-     create={CategoryCreate}
-     />
+      name='categories'
+      list={CategoryList}
+      edit={CategoryEdit}
+      create={CategoryCreate}
+    />
     <Resource name='articlesCategories' />
     <Resource name='packagesCategories' />
     <Resource name='completedArticles' />
     <Resource name='articlesPackage' />
     <Resource name='faqs' />
-    <Resource name='comments' />
+    <Resource name='comments' list={CommentList} edit={CommentEdit} />
     <Resource name='badges' />
 
     <Resource name='' />

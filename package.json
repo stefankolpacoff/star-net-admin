@@ -9,6 +9,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.9.1",
     "axios": "^0.25.0",
     "prop-types": "^15.8.1",
     "ra-data-json-server": "^3.19.6",
