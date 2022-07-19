@@ -11,7 +11,7 @@ import {
       <Datagrid rowClick='edit'>
         <NumberField source='id' sortBy='package.id' />
         <TextField source='name' />
-        <TextField source='description' />
+        <TextField source='description'  />
       </Datagrid>
     </List>
   );
