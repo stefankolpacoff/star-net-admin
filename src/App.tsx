@@ -19,6 +19,10 @@ import { CategoryCreate } from "./CategoryCreate";
 import CommentList from "./CommentList";
 import CommentEdit from "./CommentEdit";
 
+import FaqList from "./FaqList";
+import { FaqEdit } from "./FaqEdit";
+import { FaqCreate } from "./FaqCreate";
+
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
     options.headers = new Headers({ Accept: "application/json" });
@@ -54,8 +58,17 @@ const App = () => (
     <Resource name='packagesCategories' />
     <Resource name='completedArticles' />
     <Resource name='articlesPackage' />
+
     <Resource name='faqs' />
     <Resource name='comments' list={CommentList} edit={CommentEdit} />
+
+    <Resource 
+      name='faq'
+      list={FaqList}
+      edit={FaqEdit}
+      create={FaqCreate}
+       />
+    <Resource name='comments' />
     <Resource name='badges' />
 
     <Resource name='' />
