@@ -13,6 +13,10 @@ import ArticleList from "./ArticleList";
 import { ArticleCreate } from "./ArticleCreate";
 import { ArticleEdit } from "./ArticleEdit";
 
+import PackageList from "./PackageList";
+import { PackageCreate } from "./PackageCreate";
+import { PackageEdit } from "./PackageEdit";
+
 import CategoryList from "./CategoryList";
 import { CategoryEdit } from "./CategoryEdit";
 import { CategoryCreate } from "./CategoryCreate";
@@ -41,7 +45,7 @@ const App = () => (
       create={ArticleCreate}
     />
 
-    <Resource name='packages' />
+    <Resource name='packages' list={PackageList} edit={PackageEdit} create={PackageCreate} />
     <Resource
      name='categories'
      list={CategoryList} 
