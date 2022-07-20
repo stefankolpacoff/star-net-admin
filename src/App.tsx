@@ -31,62 +31,71 @@ import ArtCatList from "./ArtCatList";
 import { ArtCatEdit } from "./ArtCatEdit";
 import { ArtCatCreate } from "./ArtCatCreate";
 
+import ArtPackList from "./ArtPackList";
+import { ArtPackEdit } from "./ArtPackEdit";
+import { ArtPackCreate } from "./ArtPackCreate";
+
 const httpClient = (url: string, options: any = {}) => {
-  if (!options.headers) {
-    options.headers = new Headers({ Accept: "application/json" });
-  }
-  const { token } = JSON.parse(localStorage.getItem("auth") || "");
-  options.headers.set("Authorization", `${token}`);
-  return fetchUtils.fetchJson(url, options);
+	if (!options.headers) {
+		options.headers = new Headers({ Accept: "application/json" });
+	}
+	const { token } = JSON.parse(localStorage.getItem("auth") || "");
+	options.headers.set("Authorization", `${token}`);
+	return fetchUtils.fetchJson(url, options);
 };
 
 const dataProvider = simpleRestProvider(
-  "http://localhost:3000/api",
-  httpClient
+	"http://localhost:3000/api",
+	httpClient
 );
 const App = () => (
-  <Admin authProvider={authProvider} dataProvider={dataProvider}>
-    <Resource name='users' list={UserList} edit={UserEdit} />
+	<Admin authProvider={authProvider} dataProvider={dataProvider}>
+		<Resource name="users" list={UserList} edit={UserEdit} />
 
-    <Resource
-      name='articles'
-      list={ArticleList}
-      edit={ArticleEdit}
-      create={ArticleCreate}
-    />
+		<Resource
+			name="articles"
+			list={ArticleList}
+			edit={ArticleEdit}
+			create={ArticleCreate}
+		/>
 
-    <Resource name='packages' list={PackageList} edit={PackageEdit} create={PackageCreate} />
-    <Resource
-     name='categories'
-     list={CategoryList} 
-     edit={CategoryEdit}
-     create={CategoryCreate}
-     />
-    <Resource 
-    name='articlesCategories'
-    list={ArtCatList}
-    edit={ArtCatEdit}
-    create={ArtCatCreate}
-     />
-     
-    <Resource name='packagesCategories' />
-    <Resource name='completedArticles' />
-    <Resource name='articlesPackage' />
+		<Resource
+			name="packages"
+			list={PackageList}
+			edit={PackageEdit}
+			create={PackageCreate}
+		/>
+		<Resource
+			name="categories"
+			list={CategoryList}
+			edit={CategoryEdit}
+			create={CategoryCreate}
+		/>
+		<Resource
+			name="articlesCategories"
+			list={ArtCatList}
+			edit={ArtCatEdit}
+			create={ArtCatCreate}
+		/>
 
-    <Resource name='faqs' />
-    <Resource name='comments' list={CommentList} edit={CommentEdit} />
+		<Resource name="packagesCategories" />
+		<Resource name="completedArticles" />
+		<Resource
+			name="articlesPackage"
+			list={ArtPackList}
+			edit={ArtPackEdit}
+			create={ArtPackCreate}
+		/>
 
-    <Resource 
-      name='faq'
-      list={FaqList}
-      edit={FaqEdit}
-      create={FaqCreate}
-       />
-    <Resource name='comments' />
-    <Resource name='badges' />
+		<Resource name="faqs" />
+		<Resource name="comments" list={CommentList} edit={CommentEdit} />
 
-    <Resource name='' />
-  </Admin>
+		<Resource name="faq" list={FaqList} edit={FaqEdit} create={FaqCreate} />
+		<Resource name="comments" />
+		<Resource name="badges" />
+
+		<Resource name="" />
+	</Admin>
 );
 
 export default App;
