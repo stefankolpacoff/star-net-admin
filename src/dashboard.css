@@ -3,19 +3,28 @@
 }
 .date {
   color: rgb(52, 111, 159);
-  font-size: 2rem;
+  font-size: 3.5rem;
+  font-weight: 900;
 }
 .title {
   font-size: 4rem;
+  padding-bottom: 50px;
 }
 .cards {
   display: flex;
-  border: 1px solid black;
   justify-content: space-around;
   flex-wrap: wrap;
+  color: white;
+  font-size: x-large;
 }
-
+h2 {
+}
+p {
+  text-decoration: underline;
+}
 .element {
+  margin: 10px;
+
   height: 350px;
   width: 270px;
   box-shadow: 0px 3px 10px rgb(80, 80, 80);
@@ -25,5 +34,5 @@
   align-items: center;
 }
 .element:hover {
-  background: #445b70;
+  background: #8d9ec6;
 }
