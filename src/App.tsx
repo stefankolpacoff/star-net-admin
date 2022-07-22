@@ -81,7 +81,7 @@ const App = () => (
 		<Resource name="packagesCategories" />
 		<Resource name="completedArticles" />
 		<Resource
-			name="articlesPackage"
+			name="articlesPackages"
 			list={ArtPackList}
 			edit={ArtPackEdit}
 			create={ArtPackCreate}

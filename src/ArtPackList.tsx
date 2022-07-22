@@ -10,15 +10,15 @@ import {
   const ArtPackList = (props: ListProps) => (
     <List {...props}>
       <Datagrid rowClick='edit'>
-        <NumberField source='id' sortBy='articlescategories.id' />
-        <ReferenceField label='Article' source='idArticle' reference='articles'>
-        <>
-          <TextField source='title' />
-        </>
-        </ReferenceField>
+        <NumberField source='id' sortBy='articlespackages.id' />
         <ReferenceField label='Package' source='idPackage' reference='packages'>
         <>
           <TextField source='name' />
+        </>
+        </ReferenceField>
+        <ReferenceField label='Article' source='idArticle' reference='articles'>
+        <>
+          <TextField source='title' />
         </>
         </ReferenceField>
       </Datagrid>
