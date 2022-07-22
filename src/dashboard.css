@@ -1,0 +1,38 @@
+.dashboard {
+  text-align: center;
+}
+.date {
+  color: rgb(52, 111, 159);
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+.title {
+  font-size: 4rem;
+  padding-bottom: 50px;
+}
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  font-size: x-large;
+}
+h2 {
+}
+p {
+  text-decoration: underline;
+}
+.element {
+  margin: 10px;
+
+  height: 350px;
+  width: 270px;
+  box-shadow: 0px 3px 10px rgb(80, 80, 80);
+  border-radius: 15px;
+  background-color: #6a8eae;
+  text-align: center;
+  align-items: center;
+}
+.element:hover {
+  background: #8d9ec6;
+}

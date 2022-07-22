@@ -47,6 +47,7 @@ import CableIcon from "@mui/icons-material/Cable";
 import PackCatList from "./PackCatList";
 import { PackCatEdit } from "./PackCatEdit";
 import { PackCatCreate } from "./PackCatCreate";
+import Dashboard from "./Dashboard";
 
 import GuideList from './GuideList';
 import { GuideEdit } from "./GuideEdit";
@@ -71,9 +72,11 @@ const App = () => (
   <Admin
     authProvider={authProvider}
     dataProvider={dataProvider}
-    >
+    dashboard={Dashboard}>
+
 
     {/* Users */}
+
     <Resource
       name='users'
       list={UserList}
@@ -91,6 +94,18 @@ const App = () => (
       create={ArticleCreate}
       icon={ArticleIcon}
       options={{ label: "Articles" }}
+    />
+
+    <Resource
+      name='packages'
+      list={PackageList}
+      edit={PackageEdit}
+      create={PackageCreate}
+      icon={LibraryBooksIcon}
+      options={{ label: "Packages" }}
+    />
+
+
     />
 
     {/* Packages */}
@@ -114,6 +129,7 @@ const App = () => (
 		/>
 
     {/* Categories */}
+
     <Resource
       name='categories'
       list={CategoryList}
@@ -121,9 +137,8 @@ const App = () => (
       create={CategoryCreate}
       icon={CategoryIcon}
       options={{ label: "Catégories" }}
-    />
 
-    {/* ArticlesCategories */}
+    />
     <Resource
       name='articlesCategories'
       list={ArtCatList}
@@ -131,6 +146,18 @@ const App = () => (
       create={ArtCatCreate}
       icon={CableIcon}
       options={{ label: "Catégories par Articles" }}
+
+    />
+
+    {/* ArticlesCategories */}
+    <Resource
+
+      name='packagesCategories'
+      list={PackCatList}
+      edit={PackCatEdit}
+      create={PackCatCreate}
+      icon={CableIcon}
+      options={{ label: "Catégories par Packages" }}
     />
 
     {/* PackagesCategories */}
@@ -143,7 +170,10 @@ const App = () => (
       options={{ label: "Catégories par Packages" }}
     />
 
+
+
     {/* Comments */}
+
     <Resource
       name='comments'
       list={CommentList}
@@ -152,7 +182,9 @@ const App = () => (
       options={{ label: "Commentaires" }}
     />
 
+
     {/* Faq */}
+
     <Resource
       name='faq'
       list={FaqList}
@@ -161,6 +193,7 @@ const App = () => (
       icon={ContactSupportIcon}
       options={{ label: "FAQ" }}
     />
+
 
     {/* Guide */}
     <Resource
@@ -171,6 +204,7 @@ const App = () => (
       icon={TouchAppIcon}
       options={{ label: "Guide (tutoriel)" }}
     />
+
 
   </Admin>
 );
