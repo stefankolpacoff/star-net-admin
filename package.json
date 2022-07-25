@@ -2,7 +2,7 @@
   "name": "project3_admin",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3002",
     "dev3002": "vite --port 3002",
     "build": "tsc && vite build",
     "preview": "vite preview",
