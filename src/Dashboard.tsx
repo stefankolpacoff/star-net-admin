@@ -117,17 +117,17 @@ const Dashboard = (props: ListProps) => {
   return (
     <div className='dashboard'>
       <h2 className='date'>
-        {today.toLocaleString("default", { weekday: "long" }).toUpperCase()}{" "}
-        {time}
+        {today.toLocaleString("fr-FR", { weekday: "long" }).toUpperCase()}{" "}
+        {today.toLocaleString("fr-FR").slice(0, 5)} {time}
       </h2>
-      <h1 className='title'>Welcome the starnet admin page</h1>
+      <h1 className='title'>Bienvenue sur la plateforme *Net Admin</h1>
       <div className='cards'>
         <div className='element'>
-          <h2>Users</h2>
+          <h2>- Users -</h2>
           <p>Number of users:</p>
           <h3>{userList?.length}</h3>
           <p>Last user created:</p>
-          <h3>
+          <h2>
             {userList &&
               userList
                 .slice(-1)[0]
@@ -136,14 +136,14 @@ const Dashboard = (props: ListProps) => {
                 .split("-")
                 .reverse()
                 .join("/")}
-          </h3>
+          </h2>
         </div>
         <div className='element'>
-          <h2>Article</h2>
+          <h2>- Articles -</h2>
           <p>Number of articles</p>
           <h3>{articleList?.length}</h3>
           <p>Updated on:</p>
-          <h3>
+          <h2>
             {articleList &&
               articleList
                 .slice(-1)[0]
@@ -152,27 +152,27 @@ const Dashboard = (props: ListProps) => {
                 .split("-")
                 .reverse()
                 .join("/")}
-          </h3>
+          </h2>
         </div>
 
         <div className='element'>
-          <h2>Packages</h2>
+          <h2>- Packages -</h2>
           <p>Number of packages</p>
           <h3>{packageList?.length}</h3>
         </div>
 
         <div className='element'>
-          <h2>Categories</h2>
+          <h2>- Categories -</h2>
           <p>Number of cagtegories</p>
           <h3>{categorieList?.length}</h3>
         </div>
 
         <div className='element'>
-          <h2>Comments</h2>
+          <h2>- Comments -</h2>
           <p>Number of comments</p>
           <h3>{commentList?.length}</h3>
           <p>Last Comment:</p>
-          <h3>
+          <h2>
             {commentList &&
               commentList
                 .slice(-1)[0]
@@ -181,7 +181,7 @@ const Dashboard = (props: ListProps) => {
                 .split("-")
                 .reverse()
                 .join("/")}
-          </h3>
+          </h2>
         </div>
       </div>
     </div>
