@@ -37,7 +37,7 @@ import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import ArtPackList from "./ArtPackList";
 import { ArtPackEdit } from "./ArtPackEdit";
 import { ArtPackCreate } from "./ArtPackCreate";
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 import ArtCatList from "./ArtCatList";
 import { ArtCatEdit } from "./ArtCatEdit";
@@ -49,11 +49,10 @@ import { PackCatEdit } from "./PackCatEdit";
 import { PackCatCreate } from "./PackCatCreate";
 import Dashboard from "./Dashboard";
 
-import GuideList from './GuideList';
+import GuideList from "./GuideList";
 import { GuideEdit } from "./GuideEdit";
 import { GuideCreate } from "./GuideCreate";
-import TouchAppIcon from '@mui/icons-material/TouchApp';
-
+import TouchAppIcon from "@mui/icons-material/TouchApp";
 
 const httpClient = (url: string, options: any = {}) => {
   if (!options.headers) {
@@ -73,8 +72,6 @@ const App = () => (
     authProvider={authProvider}
     dataProvider={dataProvider}
     dashboard={Dashboard}>
-
-
     {/* Users */}
 
     <Resource
@@ -105,9 +102,6 @@ const App = () => (
       options={{ label: "Packages" }}
     />
 
-
-    />
-
     {/* Packages */}
     <Resource
       name='packages'
@@ -120,13 +114,13 @@ const App = () => (
 
     {/* ArticlesPackages */}
     <Resource
-			name="articlesPackages"
-			list={ArtPackList}
-			edit={ArtPackEdit}
-			create={ArtPackCreate}
+      name='articlesPackages'
+      list={ArtPackList}
+      edit={ArtPackEdit}
+      create={ArtPackCreate}
       icon={AutoStoriesIcon}
       options={{ label: "Articles par Packages" }}
-		/>
+    />
 
     {/* Categories */}
 
@@ -137,7 +131,6 @@ const App = () => (
       create={CategoryCreate}
       icon={CategoryIcon}
       options={{ label: "Catégories" }}
-
     />
     <Resource
       name='articlesCategories'
@@ -146,12 +139,10 @@ const App = () => (
       create={ArtCatCreate}
       icon={CableIcon}
       options={{ label: "Catégories par Articles" }}
-
     />
 
     {/* ArticlesCategories */}
     <Resource
-
       name='packagesCategories'
       list={PackCatList}
       edit={PackCatEdit}
@@ -170,8 +161,6 @@ const App = () => (
       options={{ label: "Catégories par Packages" }}
     />
 
-
-
     {/* Comments */}
 
     <Resource
@@ -181,7 +170,6 @@ const App = () => (
       icon={ModeCommentIcon}
       options={{ label: "Commentaires" }}
     />
-
 
     {/* Faq */}
 
@@ -194,7 +182,6 @@ const App = () => (
       options={{ label: "FAQ" }}
     />
 
-
     {/* Guide */}
     <Resource
       name='guide'
@@ -204,10 +191,7 @@ const App = () => (
       icon={TouchAppIcon}
       options={{ label: "Guide (tutoriel)" }}
     />
-
-
   </Admin>
 );
 
 export default App;
-

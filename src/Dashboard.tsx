@@ -163,7 +163,7 @@ const Dashboard = (props: ListProps) => {
 
         <div className='element'>
           <h2>- Categories -</h2>
-          <p>Number of cagtegories</p>
+          <p>Number of categories</p>
           <h3>{categorieList?.length}</h3>
         </div>
 
