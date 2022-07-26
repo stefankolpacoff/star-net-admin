@@ -1,0 +1,41 @@
+.dashboard {
+  text-align: center;
+}
+.date {
+  color: rgb(52, 111, 159);
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+  font-size: large;
+}
+h2 {
+  margin-bottom: 3rem;
+}
+h3 {
+  font-size: 4rem;
+  color: white;
+  margin: 5px;
+}
+p {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+.element {
+  margin: 10px;
+  height: 350px;
+  width: 270px;
+  box-shadow: 0px 3px 10px rgb(80, 80, 80);
+  border-radius: 15px;
+  background-color: #6a8eae;
+  text-align: center;
+  align-items: center;
+}

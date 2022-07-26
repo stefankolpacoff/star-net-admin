@@ -3,6 +3,7 @@ import {
   Datagrid,
   EmailField,
   FunctionField,
+  DateField,
   Identifier,
   List,
   ListProps,
@@ -20,12 +21,15 @@ type recordType = {
 const UserList = (props: ListProps) => {
   return (
     <List {...props}>
-      <Datagrid rowClick="edit">
-        <NumberField source="id" sortBy="users.id" />
-        <TextField source="firstname" />
-        <TextField source="lastname" />
-        <EmailField source="email" />
-        <BooleanNumField source="admin" />
+      <Datagrid rowClick='edit'>
+        <NumberField source='id' sortBy='users.id' />
+        <TextField source='firstName' />
+        <TextField source='lastName' />
+        <EmailField source='email' />
+        <TextField source='phoneNumber' />
+        <BooleanNumField source='isAdmin' />
+        <DateField source='registrationDate' />
+        <TextField source='userPicture' />
       </Datagrid>
     </List>
   );
