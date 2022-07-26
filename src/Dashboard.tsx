@@ -124,9 +124,9 @@ const Dashboard = (props: ListProps) => {
       <div className='cards'>
         <div className='element'>
           <h2>- Users -</h2>
-          <p>Number of users:</p>
+          <p>Number of users</p>
           <h3>{userList?.length}</h3>
-          <p>Last user created:</p>
+          <p>Last user created</p>
           <h2>
             {userList &&
               userList
@@ -142,7 +142,7 @@ const Dashboard = (props: ListProps) => {
           <h2>- Articles -</h2>
           <p>Number of articles</p>
           <h3>{articleList?.length}</h3>
-          <p>Updated on:</p>
+          <p>Updated on</p>
           <h2>
             {articleList &&
               articleList
@@ -171,7 +171,7 @@ const Dashboard = (props: ListProps) => {
           <h2>- Comments -</h2>
           <p>Number of comments</p>
           <h3>{commentList?.length}</h3>
-          <p>Last Comment:</p>
+          <p>Last Comment</p>
           <h2>
             {commentList &&
               commentList
