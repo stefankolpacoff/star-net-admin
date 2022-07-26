@@ -64,7 +64,7 @@ const httpClient = (url: string, options: any = {}) => {
 };
 
 const dataProvider = simpleRestProvider(
-  "http://localhost:3000/api",
+  `${import.meta.env.VITE_DB_URL}api`,
   httpClient
 );
 const App = () => (
