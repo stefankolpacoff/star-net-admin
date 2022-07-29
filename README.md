@@ -19,8 +19,8 @@ After the successfull installation of the packages: `npm run dev3002`.
 
 ## Contributors
 
-Antso _tech_ Rakotoson
-Nicolas _méca_ Vagnoux
-Stefan _cc tt le monde_ Kolpacoff
+Antso _tech_ Rakotoson<br>
+Nicolas _méca_ Vagnoux<br>
+Stefan _cc tt le monde_ Kolpacoff<br>
 Rémi _juice_ Bordier
 
