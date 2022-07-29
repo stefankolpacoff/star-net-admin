@@ -6,7 +6,7 @@ Starnet is the first e-learning website about blockchain & cryptocurrency.
 
 ## ReactAdmin + TypeScript
 
-Starnet project uses ReactJS,ReactAdmin, and Typescript.
+Starnet project uses ReactJS, ReactAdmin, and Typescript.
 
 ## Installation
 
